@@ -13,6 +13,7 @@
   <meta property="og:description" content="Martin Ruczizka verbindet Commercial Systems und Performance Intelligence zu belastbaren Entscheidungsgrundlagen für vertrauliche Mandatssituationen mit Schweiz- und DACH-Bezug.">
   <meta property="og:url" content="https://martin-ruczizka.ch/">
   <meta name="theme-color" content="#f5f1e8">
+  <link rel="stylesheet" href="/shared/site-header.css">
   <style>
     :root {
       --paper: #f5f1e8;
@@ -60,60 +61,6 @@
       min-height: 100vh;
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(245, 241, 232, 0.92);
-      border-bottom: 1px solid rgba(21, 23, 24, 0.08);
-      backdrop-filter: blur(16px);
-    }
-
-    .nav {
-      width: min(1180px, calc(100% - 32px));
-      min-height: 72px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 220px;
-      font-weight: 750;
-      letter-spacing: 0;
-    }
-
-    .brand img {
-      width: 34px;
-      height: 34px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 20px;
-      font-size: 0.91rem;
-      color: #303637;
-      white-space: nowrap;
-    }
-
-    .nav-links a {
-      border-bottom: 1px solid transparent;
-      padding-block: 4px;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      border-color: var(--petrol);
-      color: var(--petrol-dark);
-    }
-
     .button {
       display: inline-flex;
       align-items: center;
@@ -134,14 +81,6 @@
     .button:focus-visible {
       background: var(--petrol);
       border-color: var(--petrol);
-      color: var(--white);
-    }
-
-    .nav-links .button:hover,
-    .nav-links .button:focus-visible {
-      background: var(--petrol);
-      border-color: var(--petrol);
-      border-bottom-color: var(--petrol);
       color: var(--white);
     }
 
@@ -596,11 +535,14 @@
       font-weight: 700;
     }
 
-    @media (min-width: 1025px) {
-      .nav-links a:not(.button) {
-        transform: translateX(-18px);
-      }
+    .footer-links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
+    @media (min-width: 1025px) {
       #situationen,
       #architektur,
       #kennzahlen,
@@ -618,19 +560,6 @@
     }
 
     @media (max-width: 1040px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 16px 0;
-      }
-
-      .nav-links {
-        width: 100%;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 2px;
-      }
-
       .hero,
       .section-grid,
       .contact-panel,
@@ -652,42 +581,7 @@
       }
     }
 
-    @media (min-width: 1025px) and (max-width: 1180px) {
-      .nav {
-        gap: 18px;
-      }
-
-      .brand {
-        min-width: 205px;
-      }
-
-      .nav-links {
-        gap: 16px;
-      }
-
-      .nav-links a[href^="#"] {
-        display: none;
-      }
-    }
-
     @media (min-width: 721px) and (max-width: 1024px) {
-      .nav {
-        min-height: 72px;
-        flex-direction: row;
-        align-items: center;
-        padding: 0;
-      }
-
-      .nav-links {
-        width: auto;
-        justify-content: flex-end;
-        overflow-x: visible;
-      }
-
-      .nav-links a[href^="#"] {
-        display: none;
-      }
-
       .section-grid {
         gap: 22px;
       }
@@ -721,11 +615,6 @@
         overflow-x: clip;
       }
 
-      .topbar {
-        position: sticky;
-      }
-
-      .nav,
       .hero,
       .section,
       .footer {
@@ -733,45 +622,6 @@
         max-width: none;
         margin-left: 16px;
         margin-right: 16px;
-      }
-
-      .nav {
-        min-height: 62px;
-        flex-direction: row;
-        align-items: center;
-        padding: 10px 0;
-      }
-
-      .brand {
-        min-width: 0;
-        flex: 0 0 auto;
-      }
-
-      .brand span {
-        display: none;
-      }
-
-      .nav-links {
-        width: auto;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 0;
-        font-size: 0.86rem;
-        white-space: normal;
-        overflow-x: visible;
-      }
-
-      .nav-links a:not(.button) {
-        display: none;
-      }
-
-      .nav-links .button {
-        width: auto;
-        min-height: 38px;
-        padding: 0 13px;
-        font-size: 0.84rem;
-        line-height: 1;
       }
 
       h1 {
@@ -879,27 +729,33 @@
       .footer {
         flex-direction: column;
       }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
     }
   </style>
 </head>
 <body>
   <div class="site-shell">
-    <header class="topbar">
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a class="brand" href="#top" aria-label="Martin Ruczizka Startseite">
-          <img src="/assets/brand/mr-logo-progress-05-mark.svg" alt="" width="34" height="34">
-          <span>Martin Ruczizka</span>
-        </a>
-        <div class="nav-links">
-          <a href="#situationen">Entscheidungssituationen</a>
-          <a href="#architektur">Leistungsarchitektur</a>
-          <a href="#kennzahlen">Kennzahlen</a>
-          <a href="#kontakt">Kontakt</a>
-          <a href="https://mandate.martin-ruczizka.com/login">Mandatsbereich</a>
-          <a class="button" href="https://martin-ruczizka.com/#mandat-einordnen">Vertrauliches Gespräch</a>
-        </div>
-      </nav>
-    </header>
+    <!-- shared:site-header:start -->
+<header class="topbar">
+  <nav class="nav" aria-label="Hauptnavigation">
+    <a class="brand" href="#top" aria-label="Martin Ruczizka Startseite">
+      <img src="/assets/brand/mr-logo-progress-05-mark.svg" alt="" width="34" height="34">
+      <span>Martin Ruczizka</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-section-link" href="#situationen">Entscheidungssituationen</a>
+      <a class="nav-section-link" href="#architektur">Leistungsarchitektur</a>
+      <a class="nav-section-link" href="#kennzahlen">Kennzahlen</a>
+      <a class="nav-section-link" href="#kontakt">Kontakt</a>
+      <a href="https://mandate.martin-ruczizka.com/login">Mandatsbereich</a>
+      <a class="button" href="https://martin-ruczizka.com/#mandat-einordnen">Vertrauliches Gespräch</a>
+    </div>
+  </nav>
+</header>
+<!-- shared:site-header:end -->
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
@@ -1120,7 +976,10 @@
 
     <footer class="footer">
       <span>© Martin Ruczizka · martin-ruczizka.ch · Commercial Systems &amp; Performance Intelligence</span>
-      <a href="https://martin-ruczizka.com/">martin-ruczizka.com</a>
+      <div class="footer-links">
+        <a href="/mandatsunterlagen/">Mandatsunterlagen</a>
+        <a href="https://martin-ruczizka.com/">martin-ruczizka.com</a>
+      </div>
     </footer>
   </div>
 </body>
