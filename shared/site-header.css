@@ -81,12 +81,6 @@
   color: var(--white);
 }
 
-@media (min-width: 1025px) {
-  .topbar .nav-links .nav-section-link {
-    transform: translateX(-18px);
-  }
-}
-
 @media (min-width: 1025px) and (max-width: 1180px) {
   .topbar .nav {
     gap: 18px;
