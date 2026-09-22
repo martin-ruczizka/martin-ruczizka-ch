@@ -1,14 +1,1061 @@
 <!doctype html>
-<html lang="de">
+<html lang="de-CH">
 <head>
-<meta charset="utf-8">
-<title>Martin Ruczizka</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:640px;margin:10vh auto;padding:0 1.5rem;color:#111;line-height:1.5}</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Martin Ruczizka | Commercial Systems für Mandate mit Schweiz- und DACH-Bezug</title>
+  <meta name="description" content="Martin Ruczizka verbindet Commercial Systems, Performance Intelligence, CRM, Commerce, Daten und Budgetlogik zu belastbaren Entscheidungsgrundlagen für Mandatssituationen mit Schweiz- und DACH-Bezug.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://martin-ruczizka.ch/">
+  <link rel="icon" href="/assets/brand/mr-logo-progress-05-favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Martin Ruczizka | Commercial Systems für Mandate mit Schweiz- und DACH-Bezug">
+  <meta property="og:description" content="Martin Ruczizka verbindet Commercial Systems und Performance Intelligence zu belastbaren Entscheidungsgrundlagen für vertrauliche Mandatssituationen mit Schweiz- und DACH-Bezug.">
+  <meta property="og:url" content="https://martin-ruczizka.ch/">
+  <meta name="theme-color" content="#f5f1e8">
+  <style>
+    :root {
+      --paper: #f5f1e8;
+      --paper-soft: #fbf8f0;
+      --ink: #151718;
+      --muted: #60676a;
+      --line: #d9d1c4;
+      --petrol: #145f63;
+      --petrol-dark: #0f4549;
+      --copper: #9b5c35;
+      --sage: #dbe4dd;
+      --white: #ffffff;
+      --radius: 8px;
+      --shadow: 0 18px 48px rgba(18, 24, 24, 0.09);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-shell {
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(245, 241, 232, 0.92);
+      border-bottom: 1px solid rgba(21, 23, 24, 0.08);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      width: min(1180px, calc(100% - 32px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+      font-weight: 750;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 34px;
+      height: 34px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+      font-size: 0.91rem;
+      color: #303637;
+      white-space: nowrap;
+    }
+
+    .nav-links a {
+      border-bottom: 1px solid transparent;
+      padding-block: 4px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      border-color: var(--petrol);
+      color: var(--petrol-dark);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--petrol-dark);
+      border-radius: 4px;
+      background: var(--petrol-dark);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.94rem;
+      line-height: 1;
+      transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--petrol);
+      border-color: var(--petrol);
+      color: var(--white);
+    }
+
+    .nav-links .button:hover,
+    .nav-links .button:focus-visible {
+      background: var(--petrol);
+      border-color: var(--petrol);
+      border-bottom-color: var(--petrol);
+      color: var(--white);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--petrol-dark);
+      border-color: rgba(15, 69, 73, 0.35);
+    }
+
+    .button.secondary:hover,
+    .button.secondary:focus-visible {
+      background: rgba(20, 95, 99, 0.08);
+      border-color: var(--petrol);
+      color: var(--petrol-dark);
+    }
+
+    .hero {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 48px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.46fr);
+      gap: 44px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      margin: 0 0 20px;
+      color: var(--petrol-dark);
+      font-size: 0.79rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 590px;
+      margin-bottom: 18px;
+      font-size: clamp(2.3rem, 3.85vw, 3.55rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+      font-weight: 820;
+      text-wrap: balance;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: manual;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: #31383a;
+      font-size: clamp(1.02rem, 1.45vw, 1.16rem);
+      line-height: 1.5;
+      text-wrap: pretty;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .meta-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .meta-line span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 10px;
+      border: 1px solid rgba(21, 23, 24, 0.12);
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .portrait-panel {
+      align-self: stretch;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      overflow: hidden;
+      border: 1px solid rgba(21, 23, 24, 0.1);
+      border-radius: var(--radius);
+      background: var(--paper-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .portrait-panel img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      object-position: center 18%;
+    }
+
+    .portrait-caption {
+      padding: 18px 18px 20px;
+      border-top: 1px solid rgba(21, 23, 24, 0.1);
+      background: #fffdf8;
+      color: #3d4446;
+      font-size: 0.96rem;
+    }
+
+    .band {
+      border-top: 1px solid rgba(21, 23, 24, 0.1);
+    }
+
+    .band.light {
+      background: var(--paper-soft);
+    }
+
+    .section {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: minmax(230px, 0.36fr) minmax(0, 1fr);
+      gap: 58px;
+      align-items: start;
+    }
+
+    .section-grid > *,
+    .grid > *,
+    .architecture > *,
+    .metrics > *,
+    .mandate-list > *,
+    .contact-panel > *,
+    .notice > * {
+      min-width: 0;
+    }
+
+    .section h2 {
+      margin-bottom: 18px;
+      font-size: clamp(1.95rem, 4vw, 3.7rem);
+      line-height: 1.03;
+      letter-spacing: 0;
+      text-wrap: balance;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: manual;
+    }
+
+    .section-intro {
+      max-width: 830px;
+      color: #343b3d;
+      font-size: clamp(1rem, 1.25vw, 1.08rem);
+      line-height: 1.58;
+      text-wrap: pretty;
+    }
+
+    .label {
+      color: var(--petrol-dark);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      min-height: 156px;
+      padding: 22px 24px;
+      border: 1px solid rgba(21, 23, 24, 0.11);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: clamp(1rem, 1.25vw, 1.08rem);
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: #4b5355;
+      font-size: clamp(0.94rem, 1vw, 0.98rem);
+      line-height: 1.55;
+      text-wrap: pretty;
+      overflow-wrap: anywhere;
+    }
+
+    .profile-copy {
+      max-width: 860px;
+      min-width: 0;
+    }
+
+    .profile-copy p {
+      color: #333a3c;
+      font-size: clamp(1rem, 1.25vw, 1.08rem);
+      line-height: 1.58;
+      text-wrap: pretty;
+    }
+
+    .proof-line {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--copper);
+      background: rgba(255, 255, 255, 0.5);
+      color: #353b3c;
+      font-weight: 650;
+    }
+
+    .architecture {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid rgba(21, 23, 24, 0.12);
+      border-radius: var(--radius);
+      background: rgba(21, 23, 24, 0.12);
+    }
+
+    .architecture-item {
+      min-height: 158px;
+      padding: 22px 24px;
+      background: var(--paper-soft);
+    }
+
+    .architecture-item h3 {
+      margin-bottom: 12px;
+      font-size: clamp(0.96rem, 1vw, 1rem);
+      line-height: 1.25;
+      color: var(--petrol-dark);
+      overflow-wrap: anywhere;
+    }
+
+    .architecture-item p {
+      margin-bottom: 0;
+      color: #485052;
+      font-size: clamp(0.9rem, 0.95vw, 0.95rem);
+      line-height: 1.55;
+      text-wrap: pretty;
+      overflow-wrap: anywhere;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric {
+      min-height: 156px;
+      padding: 18px;
+      border: 1px solid rgba(21, 23, 24, 0.11);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .metric small {
+      display: block;
+      min-height: 20px;
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 12px;
+      font-size: clamp(1.48rem, 2.45vw, 2rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .metric p {
+      margin-bottom: 0;
+      color: #4c5456;
+      font-size: clamp(0.86rem, 0.9vw, 0.9rem);
+      line-height: 1.45;
+      text-wrap: pretty;
+      overflow-wrap: anywhere;
+    }
+
+    .mandate-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 14px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .mandate-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 40px;
+      padding: 10px 14px;
+      border: 1px solid rgba(20, 95, 99, 0.18);
+      border-radius: 4px;
+      background: rgba(219, 228, 221, 0.55);
+      color: #263031;
+      font-weight: 650;
+      line-height: 1.3;
+    }
+
+    .mandate-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      color: var(--petrol);
+    }
+
+    .mandate-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .notice {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+      gap: 28px;
+      align-items: start;
+      padding: 32px;
+      border: 1px solid rgba(21, 23, 24, 0.11);
+      border-radius: var(--radius);
+      background: var(--petrol-dark);
+      color: var(--white);
+    }
+
+    .notice p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .notice h2 {
+      margin-bottom: 16px;
+      color: var(--white);
+      font-size: clamp(1.8rem, 3.2vw, 3.1rem);
+      line-height: 1.05;
+      text-wrap: balance;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      hyphens: manual;
+    }
+
+    .notice ul {
+      margin: 0;
+      padding-left: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+      gap: 40px;
+      align-items: start;
+      padding: 36px;
+      border: 1px solid rgba(21, 23, 24, 0.12);
+      border-radius: var(--radius);
+      background: #fffdf8;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-links a {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(21, 23, 24, 0.12);
+      color: var(--petrol-dark);
+      font-weight: 750;
+      word-break: break-word;
+    }
+
+    .footer {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 44px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid rgba(21, 23, 24, 0.1);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: var(--petrol-dark);
+      font-weight: 700;
+    }
+
+    @media (min-width: 1025px) {
+      .nav-links a:not(.button) {
+        transform: translateX(-18px);
+      }
+
+      #situationen,
+      #architektur,
+      #kennzahlen,
+      #mandat {
+        scroll-margin-top: 112px;
+      }
+
+      #kontakt {
+        scroll-margin-top: 104px;
+      }
+
+      main {
+        padding-bottom: 160px;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
+      .hero,
+      .section-grid,
+      .contact-panel,
+      .notice {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .portrait-panel {
+        max-width: 520px;
+      }
+
+      .architecture,
+      .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1025px) and (max-width: 1180px) {
+      .nav {
+        gap: 18px;
+      }
+
+      .brand {
+        min-width: 205px;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a[href^="#"] {
+        display: none;
+      }
+    }
+
+    @media (min-width: 721px) and (max-width: 1024px) {
+      .nav {
+        min-height: 72px;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+      }
+
+      .nav-links {
+        width: auto;
+        justify-content: flex-end;
+        overflow-x: visible;
+      }
+
+      .nav-links a[href^="#"] {
+        display: none;
+      }
+
+      .section-grid {
+        gap: 22px;
+      }
+
+      .section-grid .label {
+        margin-bottom: 0;
+      }
+
+      .architecture-item {
+        min-height: 0;
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      html {
+        overflow-x: clip;
+      }
+
+      body {
+        overflow-x: clip;
+      }
+
+      .topbar {
+        position: sticky;
+      }
+
+      .nav,
+      .hero,
+      .section,
+      .footer {
+        width: auto;
+        max-width: none;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      .nav {
+        min-height: 62px;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 0;
+      }
+
+      .brand {
+        min-width: 0;
+        flex: 0 0 auto;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      .nav-links {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0;
+        font-size: 0.86rem;
+        white-space: normal;
+        overflow-x: visible;
+      }
+
+      .nav-links a:not(.button) {
+        display: none;
+      }
+
+      .nav-links .button {
+        width: auto;
+        min-height: 38px;
+        padding: 0 13px;
+        font-size: 0.84rem;
+        line-height: 1;
+      }
+
+      h1 {
+        max-width: 100%;
+        font-size: clamp(1.86rem, 7.4vw, 2.32rem);
+        line-height: 1.06;
+      }
+
+      .section h2 {
+        font-size: clamp(1.48rem, 6.7vw, 1.92rem);
+        line-height: 1.12;
+        font-weight: 780;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: manual;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .lead {
+        font-size: clamp(0.98rem, 4.1vw, 1.04rem);
+        line-height: 1.52;
+      }
+
+      .section-intro {
+        font-size: clamp(0.95rem, 3.9vw, 1rem);
+        line-height: 1.55;
+      }
+
+      .label {
+        font-size: 0.72rem;
+        line-height: 1.35;
+      }
+
+      .button {
+        min-height: 42px;
+        padding: 0 14px;
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .section-grid {
+        gap: 18px;
+      }
+
+      .section-grid .label {
+        margin-bottom: 0;
+      }
+
+      .grid.two,
+      .architecture,
+      .metrics,
+      .mandate-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .architecture-item {
+        min-height: 0;
+        padding: 20px;
+      }
+
+      .profile-copy {
+        max-width: 100%;
+      }
+
+      .portrait-panel img {
+        min-height: 340px;
+      }
+
+      .contact-panel,
+      .notice {
+        padding: 24px;
+      }
+
+      .notice h2 {
+        font-size: clamp(1.16rem, 5.2vw, 1.42rem);
+        line-height: 1.16;
+        font-weight: 760;
+      }
+
+      .notice .label {
+        font-size: 0.68rem;
+      }
+
+      .notice p,
+      .notice li {
+        font-size: clamp(0.94rem, 3.8vw, 1rem);
+        line-height: 1.5;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-<h1>Martin Ruczizka</h1>
-<p>Diese Seite wird gerade vorbereitet.</p>
+  <div class="site-shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a class="brand" href="#top" aria-label="Martin Ruczizka Startseite">
+          <img src="/assets/brand/mr-logo-progress-05-mark.svg" alt="" width="34" height="34">
+          <span>Martin Ruczizka</span>
+        </a>
+        <div class="nav-links">
+          <a href="#situationen">Entscheidungssituationen</a>
+          <a href="#architektur">Leistungsarchitektur</a>
+          <a href="#kennzahlen">Kennzahlen</a>
+          <a href="#kontakt">Kontakt</a>
+          <a href="https://mandate.martin-ruczizka.com/login">Mandatsbereich</a>
+          <a class="button" href="https://martin-ruczizka.com/#mandat-einordnen">Vertrauliches Gespräch</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Mandate mit Schweiz- und DACH-Bezug</p>
+          <h1 id="hero-title">Commercial Systems. Performance Intelligence. Steuerbarkeit für digitales Wachstum.</h1>
+          <p class="lead">Martin Ruczizka verbindet CRM, Commerce, Marketing, Daten und Budgetlogik zu steuerbaren Commercial Systems - für Mandatssituationen mit Schweiz- und DACH-Bezug, in denen Wirkung und Wirtschaftlichkeit digitaler Marktbearbeitung verlässlich beurteilt werden müssen.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://martin-ruczizka.com/#mandat-einordnen">Vertrauliches Gespräch anfragen</a>
+            <a class="button secondary" href="https://mandate.martin-ruczizka.com/login">Zum Mandatsbereich</a>
+          </div>
+          <div class="meta-line" aria-label="Profilrahmen">
+            <span>Commercial-Systems-Mandate</span>
+            <span>Performance Intelligence</span>
+            <span>Schweiz / DACH</span>
+          </div>
+        </div>
+        <aside class="portrait-panel" aria-label="Profilbild und Einordnung">
+          <img src="/assets/profile_photo/martin-ruczizka-commercial-systems-profile-640.webp" alt="Martin Ruczizka">
+          <div class="portrait-caption">Commercial Systems, Performance Intelligence und digitale Wachstumssteuerung für klare Mandatssituationen.</div>
+        </aside>
+      </section>
+
+      <section class="band light" id="situationen">
+        <div class="section section-grid">
+          <div>
+            <p class="label">Wenn Wachstum steuerbarer werden muss</p>
+          </div>
+          <div>
+            <h2>Für Mandatssituationen, in denen einzelne Kampagnen, Tools oder Reports nicht mehr reichen.</h2>
+            <p class="section-intro">Digitale Marktbearbeitung wird dann anspruchsvoll, wenn Marketing, Vertrieb, CRM, Commerce, Tracking und Reporting unterschiedliche Wahrheiten liefern. Budgets werden gebunden, bevor Wirkung und Wirtschaftlichkeit belastbar erkennbar sind. Entscheidungen hängen an Daten, die operativ vorhanden sind, aber noch nicht zu einer gemeinsamen Steuerungslogik verbunden wurden.</p>
+            <div class="grid two" style="margin-top: 30px;">
+              <article class="card">
+                <h3>Gemeinsame Steuerungswahrheit</h3>
+                <p>Marketing, Vertrieb, CRM, Commerce und Reporting in eine belastbare Ergebnislogik bringen.</p>
+              </article>
+              <article class="card">
+                <h3>Budget und Wirkung</h3>
+                <p>Investitionen beurteilen, bevor sie nur über Kampagnen, Kanäle oder Tool-Auslastung erklärt werden.</p>
+              </article>
+              <article class="card">
+                <h3>GL-/VR-nahe Entscheidungsgrundlagen</h3>
+                <p>Wachstum, Wirtschaftlichkeit und operative Machbarkeit so aufbereiten, dass Entscheidungen tragfähig werden.</p>
+              </article>
+              <article class="card">
+                <h3>Geordnete Umsetzung</h3>
+                <p>Interne Teams, Agenturen, Vendoren und externe Spezialisten über klare Rollen, Spezifikationen und Verantwortlichkeiten führen.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section section-grid">
+          <div>
+            <p class="label">Kurzprofil</p>
+          </div>
+          <div class="profile-copy">
+            <h2>Commercial Systems und Performance Intelligence für belastbare Wachstumssteuerung.</h2>
+            <p>Martin Ruczizka arbeitet an der Schnittstelle von Commercial Systems, Performance Intelligence und digitaler Wachstumssteuerung.</p>
+              <p>Er verbindet Markt, Nachfrage, CRM, Commerce, Tracking, Reporting und Budgetlogik zu belastbaren Steuerungssystemen. Daraus entstehen Entscheidungsgrundlagen, mit denen digitale Marktbearbeitung wirksam, wirtschaftlich und führbar wird.</p>
+            <div class="proof-line">Aus operativer Verantwortung, dokumentierter Performance-Steuerung und dem Aufbau integrierter Commercial-Infrastruktur.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band light" id="architektur">
+        <div class="section">
+          <p class="label">Leistungsarchitektur</p>
+          <h2>Sechs Felder, eine Steuerungslogik.</h2>
+          <p class="section-intro">Für Mandatssituationen ordnet die Leistungsarchitektur Commercial Systems, Daten, Budget, CRM, Commerce und Umsetzung zu einer führbaren Gesamtlogik.</p>
+          <div class="architecture" style="margin-top: 34px;">
+            <article class="architecture-item">
+              <h3>Commercial Systems</h3>
+              <p>Aufbau und Beurteilung steuerbarer Strukturen, die Markt, Angebot, CRM, Commerce, Pricing, Reporting und Ergebnislogik zusammenführen.</p>
+            </article>
+            <article class="architecture-item">
+              <h3>Performance Intelligence</h3>
+              <p>Führungs- und Entscheidungsgrundlagen aus Daten, Budget, Nachfrage, Conversion-Wert und Wachstumslogik.</p>
+            </article>
+            <article class="architecture-item">
+              <h3>Measurement / Revenue Truth</h3>
+              <p>Tracking, First-Party-Daten, CRM- und Buchungslogik so verbinden, dass Entscheidungen auf belastbarer Ergebnislogik beruhen.</p>
+            </article>
+            <article class="architecture-item">
+              <h3>Budgetschutz / Governance</h3>
+              <p>Wirkungsprüfung, Freigaben, Verantwortlichkeiten und Vendor-/Agentursteuerung für digitale Wachstumsarbeit.</p>
+            </article>
+            <article class="architecture-item">
+              <h3>CRM / Commerce / MarTech</h3>
+              <p>HubSpot, Tracking, Pricing, Reporting, Commerce und operative Systeme als integrierte Commercial-Infrastruktur.</p>
+            </article>
+            <article class="architecture-item">
+              <h3>Operating Model</h3>
+              <p>Klare Rollen, externe Spezialisten, Umsetzungspartner und interne Teams über Spezifikationen, Daten und Entscheidungsgrundlagen führen.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="kennzahlen">
+        <div class="section">
+          <p class="label">Kennzahlenanker</p>
+          <h2>Beleganker aus operativer Verantwortung.</h2>
+          <p class="section-intro">Die Kennzahlen zeigen Ergebnisnähe, Budgetsteuerung, Commercial-Stack-Aufbau und die Fähigkeit, digitale Wertschöpfung wirtschaftlich zu führen.</p>
+          <div class="metrics" style="margin-top: 32px;">
+            <article class="metric">
+              <small>Ergebnisnähe</small>
+              <strong>7 Mio. EUR</strong>
+              <p>Umsatz und kaufmännische Ergebnisnähe aus realer operativer Verantwortung.</p>
+            </article>
+            <article class="metric">
+              <small>Wirtschaftlichkeit</small>
+              <strong>1,58 Mio. EUR</strong>
+              <p>Gewinn und ca. 22,6% Marge als Beleg für Ergebnisdisziplin und wirtschaftliche Steuerungsnähe.</p>
+            </article>
+            <article class="metric">
+              <small>Budgetsteuerung</small>
+              <strong>&gt;1 Mio. EUR</strong>
+              <p>Performance- und Produktsignal-Tests in dokumentierten Google-Ads-Setups.</p>
+            </article>
+            <article class="metric">
+              <small>Performance-Anker</small>
+              <strong>112,54</strong>
+              <p>Conv.-Wert/Kosten als öffentlicher, dokumentierter Performance-Intelligence-Anker.</p>
+            </article>
+            <article class="metric">
+              <small>Commercial Stack</small>
+              <strong>950k EUR</strong>
+              <p>CRM-, Tracking-, Pricing-, Reporting- und Commerce-Infrastruktur als Commercial Operating System.</p>
+            </article>
+            <article class="metric">
+              <small>Operating Model</small>
+              <strong>Schlank</strong>
+              <p>Output eines grösseren Spezialistenteams durch Spezifikation, Steuerung und Partnerlogik.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band light" id="mandat">
+        <div class="section section-grid">
+          <div>
+            <p class="label">Mandatsanschluss</p>
+          </div>
+          <div>
+            <h2>Geeignet für klare Mandatssituationen mit Schweiz- oder DACH-Bezug.</h2>
+            <p class="section-intro">Die Zusammenarbeit passt, wenn digitales Wachstum nicht mehr über einzelne Kampagnen, Tools oder Reports gelöst werden kann, sondern ein belastbares Commercial Operating Model benötigt.</p>
+            <p class="section-intro">Typische Anlässe sind Commercial-System-Architektur, Performance- und Measurement-Governance, CRM-, Commerce- und Tracking-Integration, Budgetschutz, Vendor-/Agentursteuerung und Executive Sparring für digitale Wachstumssteuerung.</p>
+            <ul class="mandate-list">
+              <li><span class="mandate-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg></span><span>Commercial-System-Architektur</span></li>
+              <li><span class="mandate-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 15 4-4 3 3 5-7"/></svg></span><span>Performance- und Measurement-Governance</span></li>
+              <li><span class="mandate-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 7h4"/><path d="M14 17h4"/><path d="M10 7c4 0 4 10 8 10"/><path d="M14 7h4"/><path d="M6 17h4"/><path d="M10 17c4 0 4-10 8-10"/></svg></span><span>CRM-, Commerce- und Tracking-Integration</span></li>
+              <li><span class="mandate-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.4 2.8 7.6 7 9 4.2-1.4 7-4.6 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg></span><span>Budgetschutz und Performance-Entscheidungslogik</span></li>
+              <li><span class="mandate-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 15H6a4 4 0 0 1 0-8h7a4 4 0 0 1 0 8h-2l-4 4v-4Z"/><path d="M14 12h4a4 4 0 0 1 0 8h-1v3l-3-3h-3"/></svg></span><span>Executive Sparring für digitale Wachstumssteuerung</span></li>
+              <li><span class="mandate-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span><span>Interimistische Umsetzung bei klarem Scope</span></li>
+            </ul>
+            <div class="hero-actions">
+              <a class="button" href="https://martin-ruczizka.com/#mandat-einordnen">Mandatssituation einordnen</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section">
+          <div class="notice">
+            <div>
+              <p class="label" style="color: rgba(255,255,255,0.72);">Vertrauliche Mandatsführung</p>
+              <h2>Klare Rolle, klare Entscheidungsgrundlage.</h2>
+              <p>Wenn Wachstum, Daten, Budgets und operative Umsetzung zusammengeführt werden müssen, zählt belastbare Entscheidungsfähigkeit. Martin Ruczizka arbeitet mit klarer Rolle, nachvollziehbarer Steuerungslogik und vertraulicher Mandatsführung.</p>
+            </div>
+            <ul>
+              <li>klare Rolle und klarer Auftrag</li>
+              <li>belastbare Entscheidungsgrundlagen</li>
+              <li>Governance für Budget, Daten und Umsetzung</li>
+              <li>Commercial Systems und Performance Intelligence</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="band light" id="kontakt">
+        <div class="section">
+          <div class="contact-panel">
+            <div>
+              <p class="label">Kontakt</p>
+              <h2>Vertrauliches Gespräch zu einer Mandatssituation.</h2>
+              <p class="section-intro">Für Mandatssituationen mit Schweiz- oder DACH-Bezug ist eine erste Einordnung über die bestehende Mandatsanfrage möglich. Der geschützte Mandatsbereich bleibt laufenden Mandaten und vertraulicher Zusammenarbeit vorbehalten.</p>
+              <div class="hero-actions">
+                <a class="button" href="https://martin-ruczizka.com/#mandat-einordnen">Mandatssituation einordnen</a>
+                <a class="button secondary" href="https://mandate.martin-ruczizka.com/login">Mandatsbereich öffnen</a>
+              </div>
+            </div>
+            <div class="contact-links" aria-label="Direkte Kontaktdaten">
+              <a href="mailto:martin@ruczizka.com">martin@ruczizka.com</a>
+              <a href="tel:+436609707199">+43 660 970 71 99</a>
+              <a href="https://www.linkedin.com/in/martin-ruczizka/">linkedin.com/in/martin-ruczizka</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© Martin Ruczizka · martin-ruczizka.ch · Commercial Systems &amp; Performance Intelligence</span>
+      <a href="https://martin-ruczizka.com/">martin-ruczizka.com</a>
+    </footer>
+  </div>
 </body>
 </html>
