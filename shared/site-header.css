@@ -82,7 +82,7 @@
 }
 
 @media (min-width: 1181px) {
-  .topbar .nav-links {
+  .topbar .nav-links a:not(.button) {
     transform: translateX(-10px);
   }
 }
