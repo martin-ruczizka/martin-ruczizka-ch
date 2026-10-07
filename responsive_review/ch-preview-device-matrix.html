@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>martin-ruczizka.ch · Device Matrix</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg: #ece7dc;
+      --panel: #fffdf8;
+      --ink: #151718;
+      --muted: #5d6668;
+      --line: #d2c8b9;
+      --petrol: #0f4549;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(236, 231, 220, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .matrix {
+      display: grid;
+      gap: 24px;
+      padding: 20px;
+    }
+
+    .group {
+      display: grid;
+      gap: 14px;
+    }
+
+    .group h2 {
+      margin: 0;
+      color: var(--petrol);
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .frames {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+
+    .frame-card {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 12px 32px rgba(21, 23, 24, 0.08);
+    }
+
+    .frame-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 42px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      font-weight: 750;
+    }
+
+    .frame-title span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    iframe {
+      display: block;
+      border: 0;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>martin-ruczizka.ch · Device Matrix</h1>
+    <p>Quelle: http://127.0.0.1:4177/ · Startseite und Mandatsunterlagen. Primär optimieren: 390 / 834 / 1440. Hart prüfen: 320, 360, 430, 768, 1024, 1280.</p>
+  </header>
+
+  <main class="matrix">
+    <section class="group" aria-labelledby="primary-home">
+      <h2 id="primary-home">Startseite · Primäre Optimierungsbreiten</h2>
+      <div class="frames">
+        <article class="frame-card">
+          <div class="frame-title">Mobile <span>390 × 900</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="390" height="900" title="Mobile 390"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Tablet <span>834 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="834" height="994" title="Tablet 834"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Desktop <span>1440 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="1440" height="994" title="Desktop 1440"></iframe>
+        </article>
+      </div>
+    </section>
+
+    <section class="group" aria-labelledby="hard-home">
+      <h2 id="hard-home">Startseite · Harte Zusatzbreiten</h2>
+      <div class="frames">
+        <article class="frame-card">
+          <div class="frame-title">Minimum <span>320 × 844</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="320" height="844" title="Mobile 320"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Small Android <span>360 × 844</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="360" height="844" title="Mobile 360"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Large Mobile <span>430 × 900</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="430" height="900" title="Mobile 430"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Tablet Edge <span>768 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="768" height="994" title="Tablet 768"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Tablet Max <span>1024 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="1024" height="994" title="Tablet 1024"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Small Desktop <span>1280 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/" width="1280" height="994" title="Desktop 1280"></iframe>
+        </article>
+      </div>
+    </section>
+
+    <section class="group" aria-labelledby="primary-mandatsunterlagen">
+      <h2 id="primary-mandatsunterlagen">Mandatsunterlagen · Primäre Optimierungsbreiten</h2>
+      <div class="frames">
+        <article class="frame-card">
+          <div class="frame-title">Mobile <span>390 × 900</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="390" height="900" title="Mandatsunterlagen Mobile 390"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Tablet <span>834 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="834" height="994" title="Mandatsunterlagen Tablet 834"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Desktop <span>1440 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="1440" height="994" title="Mandatsunterlagen Desktop 1440"></iframe>
+        </article>
+      </div>
+    </section>
+
+    <section class="group" aria-labelledby="hard-mandatsunterlagen">
+      <h2 id="hard-mandatsunterlagen">Mandatsunterlagen · Harte Zusatzbreiten</h2>
+      <div class="frames">
+        <article class="frame-card">
+          <div class="frame-title">Minimum <span>320 × 844</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="320" height="844" title="Mandatsunterlagen Mobile 320"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Small Android <span>360 × 844</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="360" height="844" title="Mandatsunterlagen Mobile 360"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Large Mobile <span>430 × 900</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="430" height="900" title="Mandatsunterlagen Mobile 430"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Tablet Edge <span>768 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="768" height="994" title="Mandatsunterlagen Tablet 768"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Tablet Max <span>1024 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="1024" height="994" title="Mandatsunterlagen Tablet 1024"></iframe>
+        </article>
+        <article class="frame-card">
+          <div class="frame-title">Small Desktop <span>1280 × 994</span></div>
+          <iframe src="http://127.0.0.1:4177/mandatsunterlagen/" width="1280" height="994" title="Mandatsunterlagen Desktop 1280"></iframe>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
