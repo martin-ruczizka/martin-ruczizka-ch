@@ -763,6 +763,11 @@
       .ch-timeline-phase::before { top: 4px; }
     }
     /* CH-local-deltas:end */
+    /* technology-levels:start */
+    .ch-technology-layers { margin-top: 16px; display: grid; gap: .75rem; min-width: 0; }
+    .ch-technology-layers .ch-platforms { display: block; margin-top: 0; }
+    .ch-technology-layers h3 { margin-bottom: .4rem; }
+    /* technology-levels:end */
   </style>
 </head>
 <body>
@@ -903,7 +908,7 @@
             </article>
             <article class="architecture-item">
               <h3>CRM / Commerce / MarTech</h3>
-              <p>Shopify/HubSpot, Microsoft Graph, Power Automate und SharePoint für integrierte Commercial-Prozesse verbinden – mit APIs, Automatisierung, Tracking, Pricing und Reporting.</p>
+              <p>Webanwendungen, serverseitige Businesslogik und Integrationslösungen für eine nachvollziehbare Steuerung der Commercial-Prozesse konzipieren, entwickeln und integrieren.</p>
             </article>
             <article class="architecture-item">
               <h3>Operating Model</h3>
@@ -911,9 +916,15 @@
             </article>
           </div>
           <!-- CH05:start -->
-          <div class="ch-platforms">
-            <h3>Ausgewählte Integrationsplattformen</h3>
-            <ul><li>Shopify</li><li>HubSpot</li><li>Microsoft Azure</li><li>Microsoft Graph</li><li>Power Automate</li><li>SharePoint</li></ul>
+          <div class="ch-technology-layers">
+            <div class="ch-platforms">
+              <h3>Technologien und Infrastruktur</h3>
+              <ul><li>Node.js</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Linux/Nginx</li><li>MongoDB/Redis</li><li>Hetzner</li><li>Cloudflare Workers</li><li>Microsoft Azure</li><li>APIs &amp; Webhooks</li></ul>
+            </div>
+            <div class="ch-platforms">
+              <h3>Plattformanbindungen</h3>
+              <ul><li>Stripe</li><li>Shopify</li><li>HubSpot</li><li>Microsoft Graph</li><li>Power Automate</li><li>SharePoint</li></ul>
+            </div>
           </div>
           <!-- CH05:end -->
           <!-- CH06:start -->
