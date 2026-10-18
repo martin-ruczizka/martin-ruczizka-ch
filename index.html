@@ -738,6 +738,31 @@
         justify-content: flex-start;
       }
     }
+    /* CH-local-deltas:start */
+    #erfahrung { scroll-margin-top: 120px; }
+    .ch-mandate-role { margin: 18px 0; color: var(--petrol-dark); font-weight: 600; }
+    .ch-experience-lead { max-width: 830px; color: #343b3d; font-size: clamp(1rem, 1.25vw, 1.08rem); line-height: 1.58; }
+    .ch-timeline { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin: 32px 0 24px; }
+    .ch-timeline::before { content: ""; position: absolute; top: 4px; left: 0; right: 0; height: 1px; background: var(--line); }
+    .ch-timeline-phase { position: relative; min-width: 0; padding-top: 24px; }
+    .ch-timeline-phase::before { content: ""; position: absolute; top: 0; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--petrol); }
+    .ch-timeline-phase h3 { margin: 0 0 16px; font-size: 1.1rem; line-height: 1.4; }
+    .ch-timeline-year { display: block; margin-bottom: 12px; color: var(--petrol-dark); font-size: .82rem; font-weight: 600; letter-spacing: .035em; }
+    .ch-timeline-separator { display: none; }
+    .ch-timeline-phase p { margin: 0; color: #485052; font-size: 1rem; line-height: 1.58; overflow-wrap: anywhere; }
+    .ch-experience-note { margin: 0; padding-top: 20px; color: var(--muted); font-size: .8rem; }
+    .ch-platforms { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-top: 16px; padding: .25rem 0; min-width: 0; }
+    .ch-platforms h3 { margin: 0; color: var(--muted); font-size: .8rem; font-weight: 500; line-height: 1.5; }
+    .ch-platforms ul { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0; min-width: 0; }
+    .ch-platforms li { padding: .2rem .55rem; border: 1px solid rgba(20, 95, 99, .22); border-radius: 5px; background: rgba(255,255,255,.6); color: #596865; font-size: .75rem; line-height: 1.5; }
+    .ch-ai-card { margin-top: 16px; min-height: 0; border: 1px solid rgba(21,23,24,.12); border-radius: var(--radius); }
+    @media (max-width: 1040px) {
+      .ch-timeline { grid-template-columns: 1fr; gap: 32px; }
+      .ch-timeline::before { top: 4px; bottom: 0; left: 4px; right: auto; width: 1px; height: auto; }
+      .ch-timeline-phase { padding: 0 0 0 24px; }
+      .ch-timeline-phase::before { top: 4px; }
+    }
+    /* CH-local-deltas:end */
   </style>
 </head>
 <body>
@@ -767,6 +792,9 @@
           <p class="eyebrow">Mandate mit Schweiz- und DACH-Bezug</p>
           <h1 id="hero-title">Commercial Systems. Performance Intelligence. Steuerbarkeit für digitales Wachstum.</h1>
           <p class="lead">Martin Ruczizka verbindet CRM, Commerce, Marketing, Daten und Budgetlogik zu steuerbaren Commercial Systems - für Mandatssituationen mit Schweiz- und DACH-Bezug, in denen Wirkung und Wirtschaftlichkeit digitaler Marktbearbeitung verlässlich beurteilt werden müssen.</p>
+          <!-- CH01:start -->
+          <p class="ch-mandate-role">Interim / Fractional Commercial Transformation Lead</p>
+          <!-- CH01:end -->
           <div class="hero-actions">
             <a class="button" href="https://martin-ruczizka.com/#mandat-einordnen">Vertrauliches Gespräch anfragen</a>
             <a class="button secondary" href="https://mandate.martin-ruczizka.com/login">Zum Mandatsbereich</a>
@@ -827,6 +855,30 @@
         </div>
       </section>
 
+      <!-- CH02:start -->
+      <section class="band" id="erfahrung">
+        <div class="section">
+          <h2>Erfahrung für Aufbau, Stabilisierung und Integration</h2>
+          <p class="ch-experience-lead">Bei SITYA verantwortete Martin Ruczizka den Aufbau und die Steuerung eines digitalen Bildungsbetriebs – von Angebot und Vermarktung bis zu Organisation und digitalen Systemen.</p>
+          <div class="ch-timeline">
+            <article class="ch-timeline-phase">
+              <h3><span class="ch-timeline-year">2019–Mitte 2024</span><span class="ch-timeline-separator"> · </span><span>Aufbau und Steuerung</span></h3>
+              <p>Angebot, digitale Marktbearbeitung, Lernbetrieb und kaufmännische Abläufe wurden als zusammenhängender Geschäftsbetrieb organisiert. Martin Ruczizka verantwortete System- und Investitionsentscheidungen und führte interne Teams und externe Fachleute mit klaren Anforderungen und Zuständigkeiten.</p>
+            </article>
+            <article class="ch-timeline-phase">
+              <h3><span class="ch-timeline-year">Ab Mitte 2024</span><span class="ch-timeline-separator"> · </span><span>Stabilisierung des Betriebsmodells</span></h3>
+              <p>Die Neuordnung von Funktionen, Kosten und Dienstleistern begann im Herbst 2023 und wurde ab Mitte 2024 zum Schwerpunkt. Martin Ruczizka führte den Umbau mit dem Ziel, kritische Funktionen weiterzuführen und Abhängigkeiten im laufenden Betrieb zu verringern.</p>
+            </article>
+            <article class="ch-timeline-phase">
+              <h3><span class="ch-timeline-year">2026</span><span class="ch-timeline-separator"> · </span><span>Systemintegration und Automatisierung</span></h3>
+              <p>2026 vertiefte Martin Ruczizka die Integration der bereits bestehenden Commercial-Systemlandschaft als Teil der Betriebsstabilisierung. Er programmierte Schnittstellen und Automatisierungen, um Angebots-, Preis- und Aktionsdaten zu synchronisieren und Bestellungen mit der digitalen Leistungserbringung zu verbinden.</p>
+            </article>
+          </div>
+          <p class="ch-experience-note">Martin Ruczizka war von 2021 bis 2024 Geschäftsführer der SITYA-Komplementär-GmbH und führte in dieser Funktion den operativen KG-Betrieb.</p>
+        </div>
+      </section>
+      <!-- CH02:end -->
+
       <section class="band light" id="architektur">
         <div class="section">
           <p class="label">Leistungsarchitektur</p>
@@ -843,7 +895,7 @@
             </article>
             <article class="architecture-item">
               <h3>Measurement / Revenue Truth</h3>
-              <p>Tracking, First-Party-Daten, CRM- und Buchungslogik so verbinden, dass Entscheidungen auf belastbarer Ergebnislogik beruhen.</p>
+              <p>Tracking, CRM- und Buchungslogik zu First-Party-Intelligence zusammenführen, damit Datenqualität und Ergebnisabgleich belastbare Entscheide unterstützen.</p>
             </article>
             <article class="architecture-item">
               <h3>Budgetschutz / Governance</h3>
@@ -851,13 +903,25 @@
             </article>
             <article class="architecture-item">
               <h3>CRM / Commerce / MarTech</h3>
-              <p>HubSpot, Tracking, Pricing, Reporting, Commerce und operative Systeme als integrierte Commercial-Infrastruktur.</p>
+              <p>Shopify/HubSpot, Microsoft Graph, Power Automate und SharePoint für integrierte Commercial-Prozesse verbinden – mit APIs, Automatisierung, Tracking, Pricing und Reporting.</p>
             </article>
             <article class="architecture-item">
               <h3>Operating Model</h3>
               <p>Klare Rollen, externe Spezialisten, Umsetzungspartner und interne Teams über Spezifikationen, Daten und Entscheidungsgrundlagen führen.</p>
             </article>
           </div>
+          <!-- CH05:start -->
+          <div class="ch-platforms">
+            <h3>Ausgewählte Integrationsplattformen</h3>
+            <ul><li>Shopify</li><li>HubSpot</li><li>Microsoft Azure</li><li>Microsoft Graph</li><li>Power Automate</li><li>SharePoint</li></ul>
+          </div>
+          <!-- CH05:end -->
+          <!-- CH06:start -->
+          <article class="architecture-item ch-ai-card">
+            <h3>KI &amp; Automatisierung</h3>
+            <p>Künstliche Intelligenz gezielt für Analysen, nachvollziehbare Steuerungslogik und effizientere betriebliche Abläufe einsetzen.</p>
+          </article>
+          <!-- CH06:end -->
         </div>
       </section>
 
