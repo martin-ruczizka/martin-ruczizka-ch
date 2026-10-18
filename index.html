@@ -768,6 +768,83 @@
     .ch-technology-layers .ch-platforms { display: block; margin-top: 0; }
     .ch-technology-layers h3 { margin-bottom: .4rem; }
     /* technology-levels:end */
+    /* CH_USP_LOCAL_V1: scoped presentation */
+    .mandate-usp {
+      scroll-margin-top: 112px;
+      width: min(1180px, calc(100% - 32px));
+      margin: 32px auto;
+      padding: clamp(1.75rem, 3.5vw, 2.5rem) clamp(1.4rem, 3vw, 2rem);
+      border: 1px solid rgba(1, 105, 111, 0.10);
+      border-radius: 8px;
+      background: rgba(1, 105, 111, 0.022);
+    }
+    .mandate-usp .usp-eyebrow {
+      margin: 0;
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--petrol);
+    }
+    .mandate-usp .usp-rule {
+      position: relative;
+      height: 1px;
+      margin-block: 1.15rem 1.65rem;
+      background: rgba(1, 105, 111, 0.20);
+    }
+    .mandate-usp .usp-rule::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--petrol);
+      transform: translateY(-50%);
+    }
+    .mandate-usp .usp-body {
+      display: grid;
+      grid-template-columns: minmax(0, 0.35fr) minmax(0, 0.65fr);
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      align-items: start;
+    }
+    .mandate-usp h2 {
+      margin: 0;
+      font-family: inherit;
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+      line-height: 1.2;
+      color: var(--petrol);
+    }
+    .mandate-usp .usp-copy {
+      margin: 0;
+      font-size: clamp(1rem, 1.7vw, 1.1rem);
+      line-height: 1.6;
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      .mandate-usp .usp-body {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+      }
+    }
+    /* /CH_USP_LOCAL_V1 */
+
+    /* CH_USP_PROFILE_GAP: adjacent transition only */
+    .band:has(+ #usp) > .section {
+      padding-bottom: 0;
+    }
+    .band + #usp {
+      margin-top: 24px;
+    }
+    @media (max-width: 720px) {
+      .band + #usp {
+        margin-top: 20px;
+      }
+    }
+    /* /CH_USP_PROFILE_GAP */
+
   </style>
 </head>
 <body>
@@ -859,6 +936,17 @@
           </div>
         </div>
       </section>
+
+      <!-- CH_USP_LOCAL_V1 -->
+      <section class="mandate-usp" id="usp" aria-labelledby="usp-title">
+        <p class="usp-eyebrow">MANDATSWIRKUNG</p>
+        <div class="usp-rule" aria-hidden="true"></div>
+        <div class="usp-body">
+          <h2 id="usp-title">Umsetzen. Entlasten. Verbessern.</h2>
+          <p class="usp-copy">Veränderungen zügig realisieren, Koordinationsaufwand senken und durch einfachere, automatisierte Abläufe dauerhaft Kapazitäten freisetzen.</p>
+        </div>
+      </section>
+      <!-- /CH_USP_LOCAL_V1 -->
 
       <!-- CH02:start -->
       <section class="band" id="erfahrung">
